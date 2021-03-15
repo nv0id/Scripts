@@ -14,8 +14,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 CapsLock::Escape
 Return
 
-; Boot hyper emulator: Ctrl + Super + Enter
-#^Enter::
+; Boot hyper emulator: Ctrl + Alt + Enter
+^!Enter::
 Run, C:\Users\nvoid\AppData\Local\hyper\app-3.0.2\hyper.exe
 WinActivate, hyper
 Return
@@ -32,6 +32,7 @@ Notepad = %A_WinDir%\Notepad.exe
 Run *RunAs "%Notepad%" "%HostsFile%"; Requires AutoHotkey_L v1.0.92.01+
 ExitApp
 return
+
 
 ; Enable alt drag:
 Alt & LButton::
